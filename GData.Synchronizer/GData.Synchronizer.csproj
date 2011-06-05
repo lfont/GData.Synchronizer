@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2945FBA9-1F36-4750-9C91-D041C499D5AE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>GData.Synchronizer</RootNamespace>
+    <AssemblyName>GData.Synchronizer</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+    </Reference>
+    <Reference Include="System.Configuration">
+    </Reference>
+    <Reference Include="System.Core">
+    </Reference>
+    <Reference Include="Google.GData.AccessControl, Version=1.7.0.34591, Culture=neutral, PublicKeyToken=b4b8eb9a7afc8328">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Components\Google\Google.GData.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.Client, Version=1.7.0.34590, Culture=neutral, PublicKeyToken=04a59ca9b0273830">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Components\Google\Google.GData.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.Documents, Version=1.7.0.34594, Culture=neutral, PublicKeyToken=e4daaad656f19bb9">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Components\Google\Google.GData.Documents.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.Extensions, Version=1.7.0.34591, Culture=neutral, PublicKeyToken=0b4c5df2ebf20876">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Components\Google\Google.GData.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.Photos, Version=1.7.0.34594, Culture=neutral, PublicKeyToken=a25b50f2e8e3887a">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Components\Google\Google.GData.Photos.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data">
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Components\log4net\Mono\log4net.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Documents\DocumentDownloadTask.cs" />
+    <Compile Include="Documents\DocumentsWatcher.cs" />
+    <Compile Include="GDataWatcher.cs" />
+    <Compile Include="Picasa\PicasaDownloadTask.cs" />
+    <Compile Include="Picasa\PicasaWatcher.cs" />
+    <Compile Include="GDataFile.cs" />
+    <Compile Include="Extensions\StringToPathExtension.cs" />
+    <Compile Include="Storage\ITaskHistoryRepository.cs" />
+    <Compile Include="Storage\TaskHistory.cs" />
+    <Compile Include="Storage\TaskHistoryRepository.cs" />
+    <Compile Include="Tasks\CopyTask.cs" />
+    <Compile Include="Tasks\DownloadTask.cs" />
+    <Compile Include="Tasks\EmailTask.cs" />
+    <Compile Include="Tasks\IGDataTask.cs" />
+    <Compile Include="Tasks\NotificationTask.cs" />
+    <Compile Include="Tasks\PersistentTask.cs" />
+    <Compile Include="Tasks\TaskCollection.cs" />
+    <Compile Include="Tasks\TasksLauncher.cs" />
+    <Compile Include="Storage\IDataContext.cs" />
+    <Compile Include="Storage\SQLiteContext.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\..\PetaPoco\PetaPoco\PetaPoco.csproj">
+      <Project>{33699753-151D-4100-8F12-9AE1AEB5C5BD}</Project>
+      <Name>PetaPoco</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

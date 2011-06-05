@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{076D2F3C-BD84-475B-8E8F-B217B2F2C369}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>GData.Synchronizer.Console</RootNamespace>
+    <AssemblyName>GData.Synchronizer.Console</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <StartupObject>GData.Synchronizer.Console.MainClass</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Externalconsole>true</Externalconsole>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Externalconsole>true</Externalconsole>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+    </Reference>
+    <Reference Include="Google.GData.Extensions, Version=1.7.0.34591, Culture=neutral, PublicKeyToken=0b4c5df2ebf20876">
+      <HintPath>..\Components\Google\Google.GData.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.Client, Version=1.7.0.34590, Culture=neutral, PublicKeyToken=04a59ca9b0273830">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Components\Google\Google.GData.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.Photos, Version=1.7.0.34594, Culture=neutral, PublicKeyToken=a25b50f2e8e3887a">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Components\Google\Google.GData.Photos.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.Documents, Version=1.7.0.34594, Culture=neutral, PublicKeyToken=e4daaad656f19bb9">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Components\Google\Google.GData.Documents.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Components\log4net\Mono\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite, Version=1.0.66.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Components\System.Data.SQLite\System.Data.SQLite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\GData.Synchronizer\GData.Synchronizer.csproj">
+      <Project>{2945FBA9-1F36-4750-9C91-D041C499D5AE}</Project>
+      <Name>GData.Synchronizer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <PropertyGroup>
+    <PostBuildEvent>copy ..\..\..\Components\SQLite\Windows\sqlite3.dll</PostBuildEvent>
+  </PropertyGroup>
+</Project>

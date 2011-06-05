@@ -1,0 +1,90 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Components", "Components", "{EC32CE43-2763-465E-83A5-B3CE19172D52}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Google", "Google", "{F8B14C24-C3B1-44AD-A023-A978902E1B50}"
+	ProjectSection(SolutionItems) = preProject
+		Components\Google\Google.GData.AccessControl.dll = Components\Google\Google.GData.AccessControl.dll
+		Components\Google\Google.GData.Client.dll = Components\Google\Google.GData.Client.dll
+		Components\Google\Google.GData.Documents.dll = Components\Google\Google.GData.Documents.dll
+		Components\Google\Google.GData.Extensions.dll = Components\Google\Google.GData.Extensions.dll
+		Components\Google\Google.GData.Photos.dll = Components\Google\Google.GData.Photos.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQLite", "SQLite", "{6D05FCFE-3910-4224-A40C-FDC38ED3C83C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Windows", "Windows", "{0A296C47-77F8-41BC-BF0E-DA3D28A44D34}"
+	ProjectSection(SolutionItems) = preProject
+		Components\SQLite\Windows\sqlite3.def = Components\SQLite\Windows\sqlite3.def
+		Components\SQLite\Windows\sqlite3.dll = Components\SQLite\Windows\sqlite3.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "System.Data.SQLite", "System.Data.SQLite", "{83A1228F-13A5-408E-814B-7EC3A5661E3C}"
+	ProjectSection(SolutionItems) = preProject
+		Components\System.Data.SQLite\System.Data.SQLite.dll = Components\System.Data.SQLite\System.Data.SQLite.dll
+		Components\System.Data.SQLite\System.Data.SQLite.XML = Components\System.Data.SQLite\System.Data.SQLite.XML
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "log4net", "log4net", "{2B095954-64B5-484E-A360-A546F5E24FCF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Mono", "Mono", "{8EC0BF97-F43D-4542-BBAC-983C96F6E092}"
+	ProjectSection(SolutionItems) = preProject
+		Components\log4net\Mono\log4net.dll = Components\log4net\Mono\log4net.dll
+		Components\log4net\Mono\log4net.xml = Components\log4net\Mono\log4net.xml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GData.Synchronizer", "GData.Synchronizer\GData.Synchronizer.csproj", "{2945FBA9-1F36-4750-9C91-D041C499D5AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GData.Synchronizer.Console", "GData.Synchronizer.Console\GData.Synchronizer.Console.csproj", "{076D2F3C-BD84-475B-8E8F-B217B2F2C369}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetaPoco", "..\PetaPoco\PetaPoco\PetaPoco.csproj", "{33699753-151D-4100-8F12-9AE1AEB5C5BD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2945FBA9-1F36-4750-9C91-D041C499D5AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2945FBA9-1F36-4750-9C91-D041C499D5AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2945FBA9-1F36-4750-9C91-D041C499D5AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2945FBA9-1F36-4750-9C91-D041C499D5AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{076D2F3C-BD84-475B-8E8F-B217B2F2C369}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{076D2F3C-BD84-475B-8E8F-B217B2F2C369}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{076D2F3C-BD84-475B-8E8F-B217B2F2C369}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{076D2F3C-BD84-475B-8E8F-B217B2F2C369}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33699753-151D-4100-8F12-9AE1AEB5C5BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33699753-151D-4100-8F12-9AE1AEB5C5BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33699753-151D-4100-8F12-9AE1AEB5C5BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33699753-151D-4100-8F12-9AE1AEB5C5BD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F8B14C24-C3B1-44AD-A023-A978902E1B50} = {EC32CE43-2763-465E-83A5-B3CE19172D52}
+		{6D05FCFE-3910-4224-A40C-FDC38ED3C83C} = {EC32CE43-2763-465E-83A5-B3CE19172D52}
+		{83A1228F-13A5-408E-814B-7EC3A5661E3C} = {EC32CE43-2763-465E-83A5-B3CE19172D52}
+		{2B095954-64B5-484E-A360-A546F5E24FCF} = {EC32CE43-2763-465E-83A5-B3CE19172D52}
+		{0A296C47-77F8-41BC-BF0E-DA3D28A44D34} = {6D05FCFE-3910-4224-A40C-FDC38ED3C83C}
+		{8EC0BF97-F43D-4542-BBAC-983C96F6E092} = {2B095954-64B5-484E-A360-A546F5E24FCF}
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = GData.Synchronizer.Console\GData.Synchronizer.Console.csproj
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = None
+		$1.ResourceNamePolicy = FileFormatDefault
+		$0.StandardHeader = $2
+		$2.Text = 
+		$2.inheritsSet = Apache2License
+		$0.VersionControlPolicy = $3
+		$3.inheritsSet = Mono
+		$0.ChangeLogPolicy = $4
+		$4.UpdateMode = None
+		$4.MessageStyle = $5
+		$5.LineAlign = 0
+		$4.inheritsSet = Mono
+	EndGlobalSection
+EndGlobal
